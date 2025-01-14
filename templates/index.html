@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <script src="/static/script.js"></script>
+
+    <title>Hangman Game</title>
+</head>
+<body>
+    <h1>Hangman Game</h1>
+    <p>Hidden word: {{ hidden_word }}</p>
+    <p>Guessed letters: {{ guessed_letters }}</p>
+    <p>Tries left: {{ max_tries }}</p>
+    {% if message %}
+        <p>{{ message }}</p>
+    {% endif %}
+    <form action="/guess" method="post">
+        <input type="text" name="letter" maxlength="1" required>
+        <button type="submit">Guess</button>
+    </form>
+    <script src="/static/script.js"></script>
+</body>
+</html>
