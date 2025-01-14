@@ -1,0 +1,93 @@
+/* Variáveis para facilitar personalização */
+:root {
+    --primary-color: #3498db;
+    --secondary-color: #2ecc71;
+    --background-color: #f4f4f9;
+    --text-color: #333;
+    --border-radius: 8px;
+    --transition-time: 0.3s;
+}
+
+/* Reset básico */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: var(--background-color);
+    color: var(--text-color);
+    line-height: 1.6;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    padding: 20px;
+}
+
+/* Estilização do container principal */
+.container {
+    background: #fff;
+    padding: 20px;
+    max-width: 400px;
+    width: 100%;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: var(--border-radius);
+    text-align: center;
+}
+
+/* Estilização do título */
+h1 {
+    font-size: 2rem;
+    color: var(--primary-color);
+    margin-bottom: 20px;
+}
+
+/* Estilização do campo de entrada */
+input[type="text"] {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 2px solid var(--primary-color);
+    border-radius: var(--border-radius);
+    font-size: 1rem;
+    transition: border-color var(--transition-time);
+}
+
+input[type="text"]:focus {
+    border-color: var(--secondary-color);
+    outline: none;
+}
+
+/* Botão estilizado */
+button {
+    background: var(--primary-color);
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    font-size: 1rem;
+    border-radius: var(--border-radius);
+    cursor: pointer;
+    transition: background-color var(--transition-time);
+}
+
+button:hover {
+    background: var(--secondary-color);
+}
+
+/* Mensagens de feedback */
+.message {
+    margin-top: 20px;
+    font-size: 1rem;
+    font-weight: bold;
+}
+
+.success {
+    color: var(--secondary-color);
+}
+
+.error {
+    color: #e74c3c;
+}

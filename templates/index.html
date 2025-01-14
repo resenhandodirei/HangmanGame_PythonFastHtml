@@ -1,22 +1,44 @@
-<!DOCTYPE html>
-<html>
+<!-- <!DOCTYPE html>
+<html lang="en">
 <head>
-    <script src="/static/script.js"></script>
-
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Hangman Game</title>
+    <link rel="stylesheet" href="/static/styles.css">
 </head>
 <body>
     <h1>Hangman Game</h1>
-    <p>Hidden word: {{ hidden_word }}</p>
-    <p>Guessed letters: {{ guessed_letters }}</p>
-    <p>Tries left: {{ max_tries }}</p>
+    <p>Word: {{ hidden_word }}</p>
+    <p>Guessed Letters: {{ guessed_letters }}</p>
+    <p>Remaining Tries: {{ max_tries }}</p>
+    
     {% if message %}
-        <p>{{ message }}</p>
+        <p class="message">{{ message }}</p>
     {% endif %}
+
     <form action="/guess" method="post">
         <input type="text" name="letter" maxlength="1" required>
         <button type="submit">Guess</button>
     </form>
     <script src="/static/script.js"></script>
+</body>
+</html>
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hangman</title>
+    <link rel="stylesheet" href="/static/styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Hangman</h1>
+        <input type="text" placeholder="Digite uma letra">
+        <button>Enviar</button>
+        <div class="message success">Você acertou!</div>
+        <div class="message error">Letra errada. Tente novamente!</div>
+    </div>
 </body>
 </html>
